@@ -10,6 +10,10 @@ export default function MainPage() {
 
     }
 
+    const zerarNumero = () => {
+        setNumeroAleatorio(0)
+    }
+
     return (
         <Container>
             <h3>Número aleatório:</h3>
@@ -17,6 +21,8 @@ export default function MainPage() {
             <ButtonArea>
                 <label>Click no botão abaixo para gerar um número aleatório:</label>
                 <button onClick={gerarNumero}>Gerar número</button>
+
+                <button className="botaoZerar" onClick={ zerarNumero }>Zerar número</button>
             </ButtonArea>
         </Container>
     )
@@ -35,7 +41,8 @@ const Container = styled.div`
     }
 
     button {
-        font-size: 15px;
+        font-size: 16px;
+        font-weight: 600;
         color: #FFF;
         border: none;
         border-radius: 5px;
@@ -49,4 +56,15 @@ const Container = styled.div`
 `
 const ButtonArea = styled.div`
     line-height: 40px;
+
+    button {
+        margin: 5px;
+    }
+
+    .botaoZerar {
+        background-color: #CCC;
+    }
+    .botaoZerar:hover {
+        background-color: #DDD;
+    }
 `
